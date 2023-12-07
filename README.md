@@ -1,4 +1,4 @@
-# Ship of Harkinian Android Port
+# Zelda Ocarina of Time Android Port
 A port of Ship of Harkinian to Android. <br>
 
 Original Repository: https://github.com/HarbourMasters/Shipwright <br>
