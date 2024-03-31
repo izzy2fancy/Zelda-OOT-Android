@@ -42,7 +42,9 @@ jobs:
       - name: Setup Android SDK Tools
         uses: android-actions/setup-android@v3.2.0
         with:
-         packages: 'cmake;'
+         packages: ''
+
+      - run: sdkmanager "tools" "platform-tools" "cmake"
          
       # Change wrapper permissions
       - name: Change wrapper permissions
