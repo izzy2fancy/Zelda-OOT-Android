@@ -18,10 +18,10 @@ jobs:
       - uses: actions/checkout@v3
 
       # Add the NDK download step here
-      - name: Download NDK
-        uses: android-actions/download-ndk@v2
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@v1.4.2
         with:
-          version: '26+'
+          version: 'r26b'
           
       # Set Current Date As Env Variable
       - name: Set current date as env variable
