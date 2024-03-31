@@ -41,7 +41,13 @@ jobs:
           
       - name: Setup Android SDK Tools
         uses: android-actions/setup-android@v3.2.0
-            
+
+      - name: Set up Android SDK
+        uses: actions/setup-android@v2
+        with:
+         sdk-platform: 'android-31'
+         cmake-version: '3.25.1'
+    
       # Change wrapper permissions
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
