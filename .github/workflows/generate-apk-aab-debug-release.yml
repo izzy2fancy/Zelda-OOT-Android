@@ -44,8 +44,13 @@ jobs:
         with:
          packages: ''
 
-      - run: sdkmanager "tools" "platform-tools" "cmake"
-         
+      # Install CMake
+      - name: Install CMake
+        run: sudo apt-get install -y cmake
+
+      # Install platform tools
+      - run: sdkmanager "platform-tools"
+      
       # Change wrapper permissions
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
