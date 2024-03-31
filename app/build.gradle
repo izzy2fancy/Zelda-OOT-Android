@@ -8,7 +8,6 @@ else {
 }
 
 android {
-    ndkPath=${{ github.workspace }}/android-ndk  // Point to your own NDK
     compileSdkVersion 31
     defaultConfig {
         if (buildAsApplication) {
