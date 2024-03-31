@@ -39,9 +39,9 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: Install CMake
-        run: sudo apt-get install -y cmake
-
+      - name: CMake Action
+        uses: threeal/cmake-action@v1.3.0
+            
       # Change wrapper permissions
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
