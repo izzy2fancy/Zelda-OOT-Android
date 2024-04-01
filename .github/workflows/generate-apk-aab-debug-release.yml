@@ -46,6 +46,9 @@ jobs:
 
       # Install platform tools
       - run: sdkmanager "platform-tools"
+
+      # Install or update CMake
+      - run: sdkmanager "cmake;3.18.1"
       
       # Change wrapper permissions
       - name: Change wrapper permissions
