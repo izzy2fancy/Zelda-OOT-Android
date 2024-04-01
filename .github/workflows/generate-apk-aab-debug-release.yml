@@ -42,7 +42,7 @@ jobs:
       - name: Setup Android SDK Tools
         uses: android-actions/setup-android@v3.2.0
         with:
-         packages: ''
+         cmdline-tools-version: 10406996
       
       # Change wrapper permissions
       - name: Change wrapper permissions
