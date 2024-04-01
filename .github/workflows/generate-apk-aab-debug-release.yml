@@ -43,20 +43,7 @@ jobs:
         uses: android-actions/setup-android@v3.2.0
         with:
          packages: ''
-
-      # Install platform tools
-      - run: sdkmanager "platform-tools"
-
-      # Download and extract CMake 3.18.1
-      - name: Download and extract CMake
-        run: |
-          mkdir $RUNNER_TOOL_CACHE/cmake
-          wget -qO- "https://github.com/Kitware/CMake/releases/download/v3.18.1/cmake-3.18.1-Linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C "$RUNNER_TOOL_CACHE/cmake"
-
-      # Set CMake path in the environment
-      - name: Set CMake path
-        run: echo "export PATH=$RUNNER_TOOL_CACHE/cmake/bin:\$PATH" >> $GITHUB_ENV
-        
+      
       # Change wrapper permissions
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
