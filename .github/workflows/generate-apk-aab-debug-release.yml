@@ -44,11 +44,9 @@ jobs:
         with:
          cmdline-tools-version: 11076708
 
-      - name: Set up CMake
-        uses: marvinpinto/actions/setup-cmake@v1
-        with:
-          cmake-version: '3.25.1'
-      
+      - name: actions-setup-cmake
+        uses: jwlawson/actions-setup-cmake@v2.0.1
+                
       # Change wrapper permissions
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
