@@ -29,6 +29,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
+      - name: Setup CMake
+        uses: jwlawson/actions-setup-cmake@v2.0.1
       - name: Build APK
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
