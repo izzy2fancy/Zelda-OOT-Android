@@ -43,6 +43,11 @@ jobs:
         uses: android-actions/setup-android@v3.2.0
         with:
          cmdline-tools-version: 11076708
+
+      - name: Set up CMake
+        uses: marvinpinto/actions/setup-cmake@v1
+        with:
+          cmake-version: '3.25.1'
       
       # Change wrapper permissions
       - name: Change wrapper permissions
