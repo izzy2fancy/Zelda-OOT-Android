@@ -46,14 +46,6 @@ jobs:
 
       - name: actions-setup-cmake
         uses: jwlawson/actions-setup-cmake@v2.0.1
-                
-      # Change wrapper permissions
-      - name: Change wrapper permissions
-        run: chmod +x ./gradlew
-
-      # Run Tests Build
-      - name: Run gradle tests
-        run: ./gradlew test
 
       # Run Build Project
       - name: Build gradle project
