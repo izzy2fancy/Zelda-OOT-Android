@@ -38,8 +38,8 @@ android {
         
         externalNativeBuild {
             cmake {
-                // Specify the path to the downloaded CMake executable
-                path "$RUNNER_TOOL_CACHE/cmake/bin/cmake"
+                // Specify the path to the downloaded CMake executable using the environment variable
+                path "$System.env.RUNNER_TOOL_CACHE/cmake/bin/cmake"
                 
                 // Additional arguments if needed
                 arguments "-DANDROID_APP_PLATFORM=android-23", "-DANDROID_STL=c++_static", "-DHAVE_LD_VERSION_SCRIPT=OFF",'-DUSE_OPENGLES=ON'
