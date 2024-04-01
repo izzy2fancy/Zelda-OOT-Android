@@ -36,13 +36,12 @@ android {
             jniLibs.srcDir 'libs'
         }
         externalNativeBuild {
-            cmake {
-                path 'jni/CMakeLists.txt'
-                // Remove the version specification here
-                // Gradle will use the CMake version installed in your SDK by default
-            }
+        cmake {
+            path "jni/CMakeLists.txt"
+            version "3.16.4"
         }
     }
+}
 
     lintOptions {
         abortOnError false
